@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Compass View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CompassViewController" customModule="compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="7t5-o5-sfu">
+                                <rect key="frame" x="-0.5" y="145.5" width="375" height="375"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" allowsDirectInteraction="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7t5-o5-sfu" secondAttribute="height" multiplier="1:1" id="pwz-cf-sZU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irk-Zm-Flf">
+                                <rect key="frame" x="169" y="520.5" width="37.5" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Mxl-0Y-cdi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="irk-Zm-Flf" firstAttribute="top" secondItem="7t5-o5-sfu" secondAttribute="bottom" id="7te-ui-H6J"/>
+                            <constraint firstItem="7t5-o5-sfu" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" id="95A-hf-n8F"/>
+                            <constraint firstItem="7t5-o5-sfu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HoT-w6-N01"/>
+                            <constraint firstItem="irk-Zm-Flf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ehB-tG-oDP"/>
+                            <constraint firstItem="irk-Zm-Flf" firstAttribute="top" secondItem="7t5-o5-sfu" secondAttribute="bottom" id="iRK-Xn-XOe"/>
+                            <constraint firstItem="7t5-o5-sfu" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" id="u3y-qj-TJj"/>
+                            <constraint firstItem="7t5-o5-sfu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zAq-kZ-5rR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="angleLabel" destination="irk-Zm-Flf" id="wN2-ip-WKq"/>
+                        <outlet property="imageView" destination="7t5-o5-sfu" id="MI8-vw-ATu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1003.5" y="2.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow" width="1024" height="1024"/>
+    </resources>
+</document>
