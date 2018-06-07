@@ -33,3 +33,7 @@ tan(𝑄) = -------------------------------------
         
   let qiblaAngle = 180.0/CGFloat.pi * atan2(sin(lambdaM-lambdaL),cos(phiL)*tan(phiM)-sin(phiL)*cos(lambdaM-lambdaL))
  ```
+
+### App Store
+Check this app on app store:
+  * https://itunes.apple.com/us/app/qibla/id1395691268?ls=1&mt=8
